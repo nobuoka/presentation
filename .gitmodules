@@ -1,0 +1,3 @@
+[submodule "demo/modules/Plack-Middleware-WebSocket"]
+	path = demo/modules/Plack-Middleware-WebSocket
+	url = git@github.com:nobuoka/Plack-Middleware-WebSocket.git
