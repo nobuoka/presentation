@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>オセロ的なゲーム</title>
+  </head>
+  <body>
+    <h1>オセロ的なゲーム</h1>
+    <div class="game-status-view"></div>
+    <div class="board-view"></div>
+
+    <script src="MVCBaseSample.js"></script>
+    <script src="OthelloLikeGame.js"></script>
+    <script>
+      // View をホストする HTML 要素
+      var gameBoardHostElem = document.getElementsByClassName("board-view").item(0);
+      var gameStatusHostElem = document.getElementsByClassName("game-status-view").item(0);
+      // View 生成
+      var boardView = new OthelloLikeGame.GameBoardView(gameBoardHostElem);
+      var gamestatusView = new OthelloLikeGame.GameStatusView(gameStatusHostElem);
+      // Model 生成
+      var game = new OthelloLikeGame.GameStatus();
+      // View を Model に結びつける
+      boardView.bindModel(game);
+      gamestatusView.bindModel(game);
+      // Controller 追加
+      boardView.addEventListener("click", function (evt) {
+          game.put(evt.detail.x, evt.detail.y, game.isTurnFirst);
+      });
+    </script>
+  </body>
+</html>
