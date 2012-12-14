@@ -1,14 +1,15 @@
 /// <reference path="./MVCBaseSample.ts" />
 
-var SVG_NS = "http://www.w3.org/2000/svg";
-
-// 升目の数
-var MASU = 6;
-
 /**
  * オセロ的なゲームの機能をまとめたモジュール
  */
 module OthelloLikeGame {
+
+    // SVG 要素の名前空間
+    var SVG_NS = "http://www.w3.org/2000/svg";
+
+    // 升目の数
+    var MASU = 6;
 
     /**
      * オセロ的なゲームのボードを表す View

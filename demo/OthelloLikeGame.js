@@ -3,10 +3,10 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
-var SVG_NS = "http://www.w3.org/2000/svg";
-var MASU = 6;
 var OthelloLikeGame;
 (function (OthelloLikeGame) {
+    var SVG_NS = "http://www.w3.org/2000/svg";
+    var MASU = 6;
     var GameBoardView = (function (_super) {
         __extends(GameBoardView, _super);
         function GameBoardView(element) {
